@@ -1,5 +1,5 @@
 # <center>Crop and Weed Object Detection</center>
-![Robot%20Precision%20Agriculture.jpeg](..Presentation/Robot Precision Agriculture.jpeg)
+![Robot%20Precision%20Agriculture.jpeg](../Presentation/Robot Precision Agriculture.jpeg)
 
 ## Overview
 
@@ -24,12 +24,12 @@ For the modeling process we utlized transfer learning techniques by using the st
 The current standard for object detection model metrics is the COCO Mean Average Precision score so we will be using that as our main driving metric for our models' evaluation. However, we feel it is important to also consider the inference time as secondary metric due to potential processing constraints in the final model's deployment use case.
 
 Below is a graph showing COCO Mean Average Precisions scores on the validation set for all the models:
-![COCO mAP Val](../Plots/COCO mAP for Crop & Weed Detection Models)
+![COCO mAP Val](../Plots/COCO mAP for Crop & Weed Detection Models.png)
 
 Looks like the model with the VGG16 backbone and the 6th version of the model heads had the highest COCO Mean Average Precision score. It's COCO mAP score on the validation set was 55.3%.
 
 Next we will look at our secondary metric the average inference time the model takes to make a predition on an image. Below is a graph showing the Average Inference Time (in seconds) for the images in the validation set for all the models:
-![Inference Time Val]("../Plots/Average Inference Time Per Image (CPU) for Crop & Weed Detection Models")
+![Inference Time Val]("../Plots/Average Inference Time Per Image (CPU) for Crop & Weed Detection Models.png")
 
 Looks like the model with the custom backbone and the 7th version of the model heads had the lowest average inference time. It's average inference time on the validation set was 0.039 seconds.
 
@@ -39,20 +39,20 @@ Now lets evaluate both those models on the test set. However for comparitive pur
 
 Below is a graph showing the COCO Mean Average Precision scores the test set for the final models:
 
-![COCO mAP Test]("../Plots/COCO mAP for Crop & Weed Detection Final Models")
+![COCO mAP Test]("../Plots/COCO mAP for Crop & Weed Detection Final Models.png")
 
 As you can see the model with the VGG16 backbone and 6th version of the model heads had the highest COCO mAP score on the test set. Its COCO mAP score on the test set was 56.7% which is acutally higher than its score on the validation set (55.3%). It is also interesting to note that the model with the custom backbone and 1st version of the model heads, which was much faster than its vgg16 counterpart, 0.037 seconds compared to 0.164 seconds, respecitvely, only had a 1.4% reduction in COCO mAP score on the test set at 55.3% when compared to VGG16 backbone model (56.7%).
 
 ## Repository Structure
-.
+```
 ├── Data                               <- Source datasets used in this analysis
+├── Evaluation                         <- Models' metric results saved as csv
 ├── Plots                              <- All the plots created during training and final evaluations
 │   ├── Accuracy_Plots                 <- Plots of accuracy during training
 │   └── Loss_Plots                     <- Plots of loss metrics during training
-├── Models                             <- Trained models' weights and parameters saved in HDF5 format
-├── Evaluation                         <- Models' metric results saved as csv
-├── Presentation                       <- Presenation and images used in them
+├── Presentation                       <- Presentation and images used in them
 ├── .gitignore                         <- .gitignore file to prevent git from crawling unwanted and irrelevant files
 ├── Final_Notebook.ipynb               <- Jupyter Notebook of our methods for the modeling process, results and conclusion
 ├── README.md                          <- This README
 └── Workbook.ipynb                     <- Jupyter Notebook used as our "scratch" notebook
+```
