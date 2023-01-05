@@ -24,11 +24,13 @@ For the modeling process we utlized transfer learning techniques by using the st
 The current standard for object detection model metrics is the COCO Mean Average Precision score so we will be using that as our main driving metric for our models' evaluation. However, we feel it is important to also consider the inference time as secondary metric due to potential processing constraints in the final model's deployment use case.
 
 Below is a graph showing COCO Mean Average Precisions scores on the validation set for all the models:
+
 ![COCO mAP Val](https://github.com/Andrew-Boucher/Crop-Weed-Detection/blob/main/Plots/COCO%20mAP%20for%20Crop%20%26%20Weed%20Detection%20Models.png)
 
 Looks like the model with the VGG16 backbone and the 6th version of the model heads had the highest COCO Mean Average Precision score. It's COCO mAP score on the validation set was 55.3%.
 
 Next we will look at our secondary metric the average inference time the model takes to make a predition on an image. Below is a graph showing the Average Inference Time (in seconds) for the images in the validation set for all the models:
+
 ![Inference Time Val](https://github.com/Andrew-Boucher/Crop-Weed-Detection/blob/main/Plots/Average%20Inference%20Time%20Per%20Image%20(CPU)%20for%20Crop%20%26%20Weed%20Detection%20Models.png)
 
 Looks like the model with the custom backbone and the 7th version of the model heads had the lowest average inference time. It's average inference time on the validation set was 0.039 seconds.
