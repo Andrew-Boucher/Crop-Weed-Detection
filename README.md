@@ -35,13 +35,13 @@ Looks like the model with the custom backbone and the 7th version of the model h
 
 ## Conclusions
 
-Now lets evaluate both those models on the test set. However for comparitive purposes, since custom_model_v7 and custom model_v6 had nearly identical average inference times, only a difference of 0.0004 seconds, lets compare the COCO mAP scores for the models with the different bacbkbones but the same model heads' versions as well.
+Now lets evaluate both those models on the test set. However for comparitive purposes, since custom_model_v7 and custom model_v1 had nearly identical average inference times, only a difference of 0.001 seconds, lets compare the best COCO mAP score model to the custom model with the best COCO mAP score as well.
 
 Below is a graph showing the COCO Mean Average Precision scores the test set for the final models:
 
 ![COCO mAP Test]("../Plots/COCO mAP for Crop & Weed Detection Final Models")
 
-As you can see the model with the VGG16 backbone and 6th version of the model heads had the highest COCO mAP score on the test set. Its COCO mAP score on the test set was 56.7% which is acutally higher than its score on the validation set (55.3%). It is also interesting to note that the model with the custom backbone and 6th version of the model heads, which was much faster than its vgg16 counterpart, 0.038 seconds compared to 0.164 seconds, respecitvely, only had a 4.5% reduction in COCO mAP score on the test set at 52.2% when compared to VGG16 backbone model (56.7%).
+As you can see the model with the VGG16 backbone and 6th version of the model heads had the highest COCO mAP score on the test set. Its COCO mAP score on the test set was 56.7% which is acutally higher than its score on the validation set (55.3%). It is also interesting to note that the model with the custom backbone and 1st version of the model heads, which was much faster than its vgg16 counterpart, 0.037 seconds compared to 0.164 seconds, respecitvely, only had a 1.4% reduction in COCO mAP score on the test set at 55.3% when compared to VGG16 backbone model (56.7%).
 
 ## Repository Structure
 
@@ -50,6 +50,6 @@ As you can see the model with the VGG16 backbone and 6th version of the model he
 ├── Models                             <- Trained models' weights and parameters saved in HDF5 format
 ├── Evaluation                         <- Models' metric results saved as csv
 ├── .gitignore                         <- .gitignore file to prevent git from crawling unwanted and irrelevant files
+├── Final_Notebook.ipynb               <- Jupyter Notebook of our methods for the modeling process, results and conclusion
 ├── README.md                          <- This README
-├── Workbook.ipynb                     <- Jupyter Notebook used as our "scratch" notebook
-└── Final_Notebook.ipynb               <- Jupyter Notebook of our methods for the modeling process, results and conclusion
+└── Workbook.ipynb                     <- Jupyter Notebook used as our "scratch" notebook
