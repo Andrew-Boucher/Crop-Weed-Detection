@@ -50,5 +50,6 @@ As you can see the model with the VGG16 backbone and 6th version of the model he
 ├── Models                             <- Trained models' weights and parameters saved in HDF5 format
 ├── Evaluation                         <- Models' metric results saved as csv
 ├── .gitignore                         <- .gitignore file to prevent git from crawling unwanted and irrelevant files
-├── Final_Notebook.ipynb               <- Jupyter Notebook of our methods for the modeling process, results and conclusion
-└── README.md                          <- This README
+├── README.md                          <- This README
+├── Workbook.ipynb                     <- Jupyter Notebook used as our "scratch" notebook
+└── Final_Notebook.ipynb               <- Jupyter Notebook of our methods for the modeling process, results and conclusion
