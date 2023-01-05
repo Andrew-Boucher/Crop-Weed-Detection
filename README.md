@@ -1,5 +1,5 @@
 # <center>Crop and Weed Object Detection</center>
-![Robot%20Precision%20Agriculture.jpeg](attachment:Robot%20Precision%20Agriculture.jpeg)
+![Robot%20Precision%20Agriculture.jpeg](..Presentation/Robot Precision Agriculture.jpeg)
 
 ## Overview
 
@@ -44,11 +44,14 @@ Below is a graph showing the COCO Mean Average Precision scores the test set for
 As you can see the model with the VGG16 backbone and 6th version of the model heads had the highest COCO mAP score on the test set. Its COCO mAP score on the test set was 56.7% which is acutally higher than its score on the validation set (55.3%). It is also interesting to note that the model with the custom backbone and 1st version of the model heads, which was much faster than its vgg16 counterpart, 0.037 seconds compared to 0.164 seconds, respecitvely, only had a 1.4% reduction in COCO mAP score on the test set at 55.3% when compared to VGG16 backbone model (56.7%).
 
 ## Repository Structure
-
+.
 ├── Data                               <- Source datasets used in this analysis
 ├── Plots                              <- All the plots created during training and final evaluations
+│   ├── Accuracy_Plots                 <- Plots of accuracy during training
+│   └── Loss_Plots                     <- Plots of loss metrics during training
 ├── Models                             <- Trained models' weights and parameters saved in HDF5 format
 ├── Evaluation                         <- Models' metric results saved as csv
+├── Presentation                       <- Presenation and images used in them
 ├── .gitignore                         <- .gitignore file to prevent git from crawling unwanted and irrelevant files
 ├── Final_Notebook.ipynb               <- Jupyter Notebook of our methods for the modeling process, results and conclusion
 ├── README.md                          <- This README
