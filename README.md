@@ -13,7 +13,7 @@ The data used in this project was sourced from a [Kaggle](https://www.kaggle.com
 
 ## Data Preperation
 
-Once the data was loaded, the labels were abstracted from the .txt file and put into a dataframe where it was reformated from YOLO into Pascal VOC format. Then the images dimensions were reduced and the pixel intensities were scaled. Then the data was split into trainging, validation and test sets.
+Once the data was loaded, the labels were abstracted from the .txt file and put into a dataframe where it was reformated from YOLO into Pascal VOC format. The images' dimensions were reduced and the pixel intensities were scaled. Then the data was split into training, validation and test sets.
 
 ## Modeling
 
